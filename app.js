@@ -1,8 +1,8 @@
 const express = require('express')
 const mongoose= require('mongoose')
 const userRoutes = require('./routes/users')
-//add local storage db , will host later
-mongoose.connect('mongodb://localhost/express-rest', {useNewUrlParser:true})
+//add local storage db , will host later*changed
+mongoose.connect('mongodb://zhm:zhm123@cluster1-shard-00-00-hti91.mongodb.net:27017,cluster1-shard-00-01-hti91.mongodb.net:27017,cluster1-shard-00-02-hti91.mongodb.net:27017/test?ssl=true&replicaSet=Cluster1-shard-0&authSource=admin&retryWrites=true', {useNewUrlParser:true})
 mongoose.set('useFindAndModify', false);
 
 //init app
